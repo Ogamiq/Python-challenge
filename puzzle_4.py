@@ -3,7 +3,6 @@ import re
 from bs4 import BeautifulSoup
 
 
-
 def find(pat,text):
     match = re.search(pat,text)
     if match:
