@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 def find(pat,text):
     match = re.search(pat,text)
     if match:
-        return match.group()
+        return match.group(1)
 
 
 num = '12345' # initial value of nothing to start the chain
@@ -27,7 +27,7 @@ while counter <= 400:
     if counter == 84:
          num = str(int((find('[0-9]{1,7}',text)))/2)
     else:
-        num = (find('[0-9]{1,7}',text))
+        num = (find('and the next nothing is ([0-9]{1,7})',text))
 
     print("Iteration {}: next num to put in the url is: {} ".format(counter,num))
     counter += 1
