@@ -11,7 +11,6 @@ def find(pat,text):
 
 
 num = '12345' # initial value of nothing to start the chain
-
 counter = 0
 
 while counter <= 400:
@@ -31,3 +30,8 @@ while counter <= 400:
 
     print("Iteration {}: next num to put in the url is: {} ".format(counter,num))
     counter += 1
+
+#Puzzle 4 solved!! Without any external help. Took me 1 hour and 15 minutes to program it, but
+#I've been thinking about this task yesterday.
+
+#The answer is found at iteration: 248, number 66831 ---> peak.html
