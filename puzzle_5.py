@@ -4,12 +4,12 @@ import pickle
 
 
 #open file data_p5.p in a read-binary mode
-file = open('data_p5.p','rb')
-raw_data = file.read()
-file.close()
+with open('data_p5.p','rb') as file:
+    raw_data = file.read()
+
 
 data = pickle.loads(raw_data)
 
+for dict in data:
+    print(''.join(tuple[0] * tuple[1] for tuple in dict))
 
-for li in data: #for list of tuples in data print list of tuple
-    print(li)
