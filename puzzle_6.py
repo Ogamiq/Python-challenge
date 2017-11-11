@@ -11,12 +11,9 @@ def find(pat, text):
     else:
         raise ValueError("Function 'find' didn't find num in text")
 
-
-#TODO: make a loop to access the files
-
 counter = 1
 num = '90052' #initial number to start the block chain
-while(counter < 910):
+while(counter < 1000):
     rel_path = 'data_p6/{}.txt'.format(num)
     with open(rel_path, 'r') as f:
         text = f.read()
@@ -25,3 +22,7 @@ while(counter < 910):
     counter += 1
 
 
+#The clue at 46145 is to find comments inside of a zip file.
+#Those are not comments inside a text file
+#I didn't manage to do that so
+#I've decided to skip this part and proceed to the next puzzle.
