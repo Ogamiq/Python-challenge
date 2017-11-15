@@ -8,7 +8,12 @@ pix = img.load()
 
 
 coded_m = []
-for i in range(0,width - 3,7):
+for i in range(0,width - 5,7):
     coded_m.append(pix[i,height/2][0])
 
-print(coded_m)
+#print(coded_m)
+
+encoded_list  = list(map(chr,coded_m))
+message = "".join(encoded_list)
+print(message)
+
