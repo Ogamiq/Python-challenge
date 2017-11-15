@@ -1,19 +1,25 @@
 from PIL import Image
+import re
 
 
 img = Image.open("/home/milosz/pycharmProjects/python_challenge/resources/oxygen.png")
 height = img.height
 width = img.width
 pix = img.load()
-
+img.close()
 
 coded_m = []
-for i in range(0,width - 5,7):
+for i in range(0,width,7):
     coded_m.append(pix[i,height/2][0])
 
-#print(coded_m)
+message  = "".join(map(chr,coded_m))[:-3]
 
-encoded_list  = list(map(chr,coded_m))
-message = "".join(encoded_list)
-print(message)
+s_numbers = re.findall("[0-9]{3}",message)
+i_numbers = map(int,s_numbers)
+answer = "".join((map(chr,i_numbers)))
+
+print(answer)
+
+
+
 
